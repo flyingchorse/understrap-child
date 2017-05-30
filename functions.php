@@ -22,7 +22,7 @@ function theme_enqueue_styles() {
 
  
    $query_args = array(
-		'family' => 'Open+Sans|Oswald|Dosis|Roboto+Slab|Roboto:100|Raleway|Biryani:200|Work+Sans:200|Rajdhani:400',
+		'family' => 'Open+Sans|Oswald|Dosis|Roboto+Slab|Roboto:100|Raleway:100|Biryani:200|Work+Sans:200|Rajdhani:400',
 		'subset' => 'latin,latin-ext',
 	);
 	
@@ -32,6 +32,64 @@ function theme_enqueue_styles() {
     
 
 }
+
+add_action( 'customize_register', 'secondstep_customize_register' ); 
+
+function secondstep_customize_register( $wp_customize ) {
+	
+class Taxonomy_Dropdown_Customize_Control extends WP_Customize_Control {
+    public $type = 'taxonomy_dropdown';
+    var $defaults = array();
+    public $args = array();
+ 
+    public function render_content(){
+        // Call wp_dropdown_cats to ad data-customize-setting-link to select tag
+        add_action('wp_dropdown_cats', array($this, 'wp_dropdown_cats'));
+ 
+        // Set some defaults for our control
+        $this->defaults = array(
+            'show_option_none' => __('None'),
+            'orderby' => 'name', 
+            'hide_empty' => 0,
+            'id' => $this->id,
+            'selected' => $this->value(),
+        );
+ 
+        // Parse defaults against what the user submitted
+        $r = wp_parse_args($this->args, $this->defaults);
+ 
+?>
+	<label><span class="customize-control-title"><?php echo esc_html($this->label); ?></span></label>
+<?php  
+        // Generate our select box
+        wp_dropdown_categories($r);
+    }
+ 
+    function wp_dropdown_cats($output){
+        // Search for <select and replace it with <select data-customize=setting-link="my_control_id"
+        $output = str_replace('<select', '<select ' . $this->get_link(), $output);
+        return $output;
+    }
+}
+
+
+$wp_customize->add_section('theme_homepage_category', array(
+	'title' => __('Homepage Post Tile Category'),
+	'priority' => 36,
+	'args' => array(), // arguments for wp_dropdown_categories function...optional
+));
+ 
+$wp_customize->add_setting('homepage_category', array(
+	'default' => get_option('default_category', ''),
+));
+ 
+$wp_customize->add_control( new Taxonomy_Dropdown_Customize_Control($wp_customize, 'homepage_category', array(
+	'label' => __('Select Category to show in post tiles'),
+	'section' => 'theme_homepage_category',
+	'settings' => 'homepage_category',
+)));
+}
+
 
 function get_wp_gallery_ids($post_content) {
 	
@@ -44,10 +102,6 @@ function title_header (){
 	
 $thepostcounter = get_post_meta(get_the_ID(),'incr_number',true);
 	?>
-	<span class="keyline"></span>
-		    		<span class="navmnth">0</span>
-		    		<span class="nav-point">.</span>
-		    		<span id="article-number" class="navyr"><?php if ($thepostcounter) { echo $thepostcounter;} else { echo '00';}?></span>
 					<span class="keyline"></span>
 		    		<span class="sub-article">
 		    			<span id="post-title" class="subarticle"><?php the_title(); ?></span><span class="sub-article-wrap"><span class="sub-subarticle sub"></br></span></span>
@@ -94,11 +148,7 @@ function digidol_gallery_carousel() {
 		<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="5000">
 		<div class="wrapper" id="month-wrap">
 			<div class="container">
-				<div class="monthind hidden-md-down">
-		<div class="month"><?php echo date('m'); ?></div>
-		<div class="counterkeyline"></div>
-		<div class="yearicon"><?php echo date('y');?></div>
-	</div>
+				
 			</div>
 		</div>
 		<div class="carousel-inner" role="listbox">	

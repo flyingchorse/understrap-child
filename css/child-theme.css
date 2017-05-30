@@ -4627,10 +4627,17 @@ button.close {
 .carousel-item {
   position: relative;
   display: none;
-  width: 100%;
-  transition: transform 0.5s ease;
-  backface-visibility: hidden;
-  perspective: 1000px; }
+  width: 100%; }
+  @media (-webkit-transform-3d) {
+    .carousel-item {
+      transition: transform 0.5s ease;
+      backface-visibility: hidden;
+      perspective: 1000px; } }
+  @supports (transform: translate3d(0, 0, 0)) {
+    .carousel-item {
+      transition: transform 0.5s ease;
+      backface-visibility: hidden;
+      perspective: 1000px; } }
 
 .carousel-item.active,
 .carousel-item-next,
@@ -4642,17 +4649,27 @@ button.close {
   position: absolute;
   top: 0; }
 
-.carousel-item-next.carousel-item-left,
-.carousel-item-prev.carousel-item-right {
-  transform: translate3d(0, 0, 0); }
+@media (-webkit-transform-3d) {
+  .carousel-item-next.carousel-item-left,
+  .carousel-item-prev.carousel-item-right {
+    transform: translate3d(0, 0, 0); }
+  .carousel-item-next,
+  .active.carousel-item-right {
+    transform: translate3d(100%, 0, 0); }
+  .carousel-item-prev,
+  .active.carousel-item-left {
+    transform: translate3d(-100%, 0, 0); } }
 
-.carousel-item-next,
-.active.carousel-item-right {
-  transform: translate3d(100%, 0, 0); }
-
-.carousel-item-prev,
-.active.carousel-item-left {
-  transform: translate3d(-100%, 0, 0); }
+@supports (transform: translate3d(0, 0, 0)) {
+  .carousel-item-next.carousel-item-left,
+  .carousel-item-prev.carousel-item-right {
+    transform: translate3d(0, 0, 0); }
+  .carousel-item-next,
+  .active.carousel-item-right {
+    transform: translate3d(100%, 0, 0); }
+  .carousel-item-prev,
+  .active.carousel-item-left {
+    transform: translate3d(-100%, 0, 0); } }
 
 .carousel-control-prev,
 .carousel-control-next {
@@ -4714,6 +4731,7 @@ button.close {
     margin-right: 3px;
     margin-left: 3px;
     text-indent: -999px;
+    cursor: pointer;
     background-color: rgba(255, 255, 255, 0.5); }
     .carousel-indicators li::before {
       position: absolute;
@@ -9229,7 +9247,6 @@ body {
   z-index: 1033; }
 
 .sticky-top {
-  position: absolute;
   left: 0;
   right: 0; }
 
@@ -9257,7 +9274,6 @@ ul#main-menu.nav.navbar-nav {
 
 .navbar-toggler {
   float: right;
-  margin-top: 0.54rem;
   border: none;
   font-size: 2.0rem; }
 
@@ -9265,8 +9281,8 @@ button:focus {
   outline: 0; }
 
 .navbar-brand {
-  font-family: 'HelveticaNeueW01-65Medi';
-  font-size: 1.7rem;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.5rem;
   letter-spacing: -0.02em;
   padding-top: .40rem; }
 
@@ -9291,12 +9307,9 @@ button:focus {
 .navbar-nav a {
   color: black; }
 
-.admin-bar .sticky-top {
-  top: 46px; }
-
-@media screen and (min-width: 783px) {
-  .admin-bar .sticky-top {
-    top: 32px; } }
+.sticky-top {
+  position: relative;
+  background-color: black; }
 
 .monthind {
   padding-left: 18px;
@@ -9399,6 +9412,9 @@ button:focus {
 #hero-slides {
   padding: 0; }
 
+.subarticle, #hero-slides, .keyline, .navmnth, .nav-point, .navyr {
+  display: none; }
+
 .full-screen {
   background-size: cover;
   background-position: center;
@@ -9417,9 +9433,6 @@ button:focus {
 
 .comments-area {
   padding-top: 30px; }
-
-main {
-  padding-bottom: 35px; }
 
 /* CSS used here will be applied after bootstrap.css */
 /* MARKETING CONTENT
@@ -9483,17 +9496,18 @@ h1.entry-title {
   display: block; }
 
 .card-title, .post-incr, .card-title .zero, .card-title .point {
-  font-family: 'HelveticaNeueW02-UltLt';
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
   color: rgba(255, 255, 255, 0.69); }
 
 .card-title .post-incr {
   font-family: 'HelveticaNeueW01-65Medi'; }
 
 .card-title .zero {
-  letter-spacing: -0.09em; }
+  letter-spacing: -0.01em; }
 
 .card-title .point {
-  letter-spacing: -0.07em; }
+  letter-spacing: -0.01em; }
 
 aside {
   padding-bottom: 4.0rem;
@@ -9539,3 +9553,16 @@ aside li {
 
 .mce-content-body {
   background-color: white; }
+
+@media screen and (min-width: 783px) {
+  .admin-bar .sticky-top {
+    top: 32px; }
+  .sticky-top {
+    position: absolute;
+    background-color: transparent; }
+  .subarticle, .keyline {
+    display: inline-block; }
+  #hero-slides {
+    display: inherit; }
+  .navbar-brand {
+    font-size: 2.0rem; } }

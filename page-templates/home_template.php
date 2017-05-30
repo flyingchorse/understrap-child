@@ -37,7 +37,9 @@ $posts_style = 'grid';
 			
 				<main class="site-main" id="main">
 					<div class="row">
-				<?php $latest_blog_posts = new WP_Query( array( 'category_name' => 'article' ) );?>
+				<?php 
+					$theme_category = get_theme_mod( 'homepage_category', 'default_value' );
+					$latest_blog_posts = new WP_Query( array( 'cat' => $theme_category ) );?>
 					<?php if ( $latest_blog_posts->have_posts() ) : ?>
 
 						<?php /* Start the Loop */ ?>

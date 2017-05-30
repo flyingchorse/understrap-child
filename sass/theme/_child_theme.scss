@@ -19,7 +19,6 @@ body {
 }
 
 .sticky-top {
-	position: absolute;
 	left: 0;
 	right: 0;
 }
@@ -61,15 +60,14 @@ ul#main-menu.nav.navbar-nav {
 
 .navbar-toggler {
 	float: right;
-	margin-top: 0.54rem;
 	border: none;
 	font-size: 2.0rem;
 }
 button:focus {outline:0;}
 
 .navbar-brand {
-	font-family:'HelveticaNeueW01-65Medi';
-	font-size: 1.7rem;
+	font-family: 'Work Sans', sans-serif;
+	font-size: 1.5rem;
 	letter-spacing: -0.02em;
 	padding-top: .40rem;
 }
@@ -106,14 +104,13 @@ button:focus {outline:0;}
 	color: black;
 }
 
-.admin-bar .sticky-top {
-  top: 46px;
-}
-@media screen and (min-width: 783px) {
-  .admin-bar .sticky-top {
-    top: 32px;
-  }
-}
+
+ .sticky-top {
+	  position: relative;
+	  background-color: black;	  }
+	  
+
+
 
 
 #single-wrapper, #page-wrapper {
@@ -168,7 +165,9 @@ font-family:"HelveticaNeueW02-UltLt";
 #wrapper-hero {
 //	margin-top: -83px;
 }
-
+.subarticle, #hero-slides, .keyline , .navmnth, .nav-point, .navyr {
+	display: none;
+}
 .full-screen {
   background-size: cover;
   background-position: center;
@@ -194,9 +193,7 @@ font-family:"HelveticaNeueW02-UltLt";
 }
 
 
-main {
-	padding-bottom: 35px;
-}
+
 /* CSS used here will be applied after bootstrap.css */
 
  /* MARKETING CONTENT
@@ -276,7 +273,8 @@ h1.entry-title  {
 }
 
 .card-title, .post-incr , .card-title .zero, .card-title .point  {
-	font-family:'HelveticaNeueW02-UltLt';
+	font-family: 'Raleway', sans-serif;
+	font-weight: 300;
 	color: rgba(255, 255, 255, 0.69)
 }
 .card-title .post-incr {
@@ -284,11 +282,11 @@ h1.entry-title  {
 }
 
 .card-title .zero {
-	letter-spacing: -0.09em;
+	letter-spacing: -0.01em;
 }
 
 .card-title .point {
-	letter-spacing: -0.07em;
+	letter-spacing: -0.01em;
 }
 
 
@@ -351,4 +349,23 @@ aside li {
 .mce-content-body {
 	
 background-color: white;
+}
+
+@media screen and (min-width: 783px) {
+  .admin-bar .sticky-top {
+    top: 32px;
+  }
+  .sticky-top {
+	  position: absolute;
+	  background-color: transparent;	  }
+
+	  .subarticle, .keyline {
+	display: inline-block;
+}
+#hero-slides {
+	display: inherit;
+}
+.navbar-brand {
+	font-size: 2.0rem;
+}
 }

@@ -9,7 +9,7 @@ $col = 4;
 ?>
 
 
-	<div class="col-md-2 col-xl-2 article-card">
+	<div class="col-md-4 col-xl-4 article-card">
 
 
 		<div class="card card-inverse ">
@@ -22,7 +22,7 @@ $col = 4;
 				<div class="card-img-overlay">
 
 					<header class="entry-header">
- 						<h4 class="card-title"><span class="zero">0</span><span class="point">.</span><span class="post-incr"><?php echo esc_html( get_post_meta($post->ID,'incr_number',true));  ?></span></h4> 
+ 						<h4 class="card-title"><span class="zero"><?php the_title(); ?></span><span class="point">.</span><span class="post-incr"><?php echo esc_html( );  ?></span></h4> 
 
 						<?php if ( 'post' === get_post_type() ) : ?>
 
