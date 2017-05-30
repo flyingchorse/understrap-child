@@ -9243,7 +9243,6 @@ body {
 
 .navbar {
   background-color: transparent;
-  padding-top: 45px;
   z-index: 1033; }
 
 .sticky-top {
@@ -9308,8 +9307,8 @@ button:focus {
   color: black; }
 
 .sticky-top {
-  position: relative;
-  background-color: black; }
+  position: absolute;
+  background-color: #3c3c3c; }
 
 .monthind {
   padding-left: 18px;
@@ -9412,7 +9411,10 @@ button:focus {
 #hero-slides {
   padding: 0; }
 
-.subarticle, #hero-slides, .keyline, .navmnth, .nav-point, .navyr {
+#wrapper-hero {
+  margin-top: 63px; }
+
+.subarticle, .keyline, .navmnth, .nav-point, .navyr {
   display: none; }
 
 .full-screen {
@@ -9562,6 +9564,10 @@ aside li {
     background-color: transparent; }
   .subarticle, .keyline {
     display: inline-block; }
+  .navbar {
+    padding-top: 45px; }
+  #wrapper-hero {
+    margin-top: 0px; }
   #hero-slides {
     display: inherit; }
   .navbar-brand {
