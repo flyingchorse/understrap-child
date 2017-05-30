@@ -9484,7 +9484,8 @@ button:focus {
   letter-spacing: -1px; }
 
 h1.entry-title {
-  padding-bottom: 4.5rem; }
+  padding-bottom: 4.5rem;
+  display: none; }
 
 .single .entry-title {
   text-align: left; }
