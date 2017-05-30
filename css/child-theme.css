@@ -9245,6 +9245,9 @@ body {
   background-color: transparent;
   z-index: 1033; }
 
+.admin-bar .sticky-top {
+  top: 46px; }
+
 .sticky-top {
   left: 0;
   right: 0; }
