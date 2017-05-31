@@ -5381,7 +5381,12 @@ var Popover = function ($) {
 })();
 
 var $item = jQuery('.carousel .carousel-item');
-var $wHeight = jQuery(window).height() - 150;
+var $wHeight = jQuery(window).height();
+if (jQuery(window).width() <755 ){
+	$wHeight = $wHeight * .90;
+}else{
+$wHeight = $wHeight * .95;
+}
 
 $item.height($wHeight); 
 $item.addClass('full-screen');
@@ -5397,7 +5402,14 @@ jQuery('.carousel img').each(function() {
 });
 
 jQuery(window).on('resize', function (){
-  $wHeight = jQuery(window).height() - 150;
+  $wHeight = jQuery(window).height();
+  if (jQuery(window).width() <755 ){
+	$wHeight = $wHeight * .90;
+	}else{
+
+	$wHeight = $wHeight * .95;
+	
+  	}
   $item.height($wHeight);
 });
 
