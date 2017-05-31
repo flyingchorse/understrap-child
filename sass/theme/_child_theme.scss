@@ -250,7 +250,7 @@ h1.entry-title  {
 	padding-bottom: 4.5rem;
 // Removed top padding of page title	
 //	text-align: right;
-display: none;
+
 	}
 
 .single .entry-title  {
@@ -384,4 +384,10 @@ background-color: white;
 		.navbar-brand {
 		font-size: 2.0rem;
 		}
+		h1.entry-title  {
+	
+// Removed top padding of page title	
+//	text-align: right;
+display: none;
+	}
 }

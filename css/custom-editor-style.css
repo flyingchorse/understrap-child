@@ -9484,8 +9484,7 @@ button:focus {
   letter-spacing: -1px; }
 
 h1.entry-title {
-  padding-bottom: 4.5rem;
-  display: none; }
+  padding-bottom: 4.5rem; }
 
 .single .entry-title {
   text-align: left; }
@@ -9575,4 +9574,6 @@ aside li {
   #hero-slides {
     display: inherit; }
   .navbar-brand {
-    font-size: 2.0rem; } }
+    font-size: 2.0rem; }
+  h1.entry-title {
+    display: none; } }
