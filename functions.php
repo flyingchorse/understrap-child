@@ -202,7 +202,7 @@ function child_theme_setup() {
 		
 	// Add other useful image sizes for use through Add Media modal
 	add_image_size( 'folio-image', 1110 );
-	add_image_size( 'homepage', 1500 );
+	add_image_size( 'homepage', 2000 );
 	add_image_size( 'grid-image', 890,500, true );
 	add_image_size('archive-thumb',208,116, true);
 	add_image_size('featured_preview', 55, 55, true);
