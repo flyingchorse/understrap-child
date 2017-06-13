@@ -39,7 +39,6 @@ jQuery(document).ready(function(){
 	
 		
 
-
 /*
 	if( jQuery('body.home').length ){
       var $elem = jQuery('#carouselExampleControls');
