@@ -27,61 +27,17 @@ jQuery('.carousel img').each(function() {
 
 
 
-var $article = jQuery('.home .site-main .card');
-$article.height($wHeight); 
-$article.addClass('full-screen');
-
-jQuery('.home .site-main img').each(function() {
-  var $src = jQuery(this).attr('src');
-  jQuery(this).parent().css({
-    'background-image' : 'url(' + $src + ')'
-  });
-  jQuery(this).remove();
-});
-
-
 jQuery(window).on('resize', function (){
   var $wHeight = (jQuery(window).width() / 1500) * 844;
   $item.height($wHeight);
-  $article.height($wHeight); 
+  
 });
 
 
 
 jQuery(document).ready(function(){
 	
-	var didScroll = false;
-	
-	jQuery(window).scroll(function() {
-    didScroll = true;
-});
- 
-setInterval(function() {
-	
-    if ( didScroll ) {
-	    
-        didScroll = false;
-        
-	      jQuery('.article-card').each(function(){
-	        var itemOffset = Math.abs(jQuery(this).offset().top)-150;
-	        var itemHeight = Math.abs(jQuery(this).outerHeight());
-	        var height = jQuery(window).scrollTop();
-	        if (itemOffset < height && height < (itemOffset+itemHeight)) {
-		      $articletext =  jQuery(this).find('.subarticle');
-		      $incrnum = jQuery(this).find('.post-incr'); 
-	          console.log($articletext.text());
-	          console.log(itemOffset);
-	          console.log(height);
-	          console.log(itemOffset+itemHeight);
-	          jQuery('#post-title').text($articletext.text());
-	          jQuery('#article-number').text($incrnum.text());
-	        }
-    	});    
-    }
-    
-}, 250);
-
-	
+		
 
 
 /*
