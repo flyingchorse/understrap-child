@@ -1,6 +1,3 @@
-
-
-
 jQuery('#navbarNavDropdown').on('hidden.bs.collapse', function () {
   jQuery('.navbar').removeClass('menu-pane');
 });

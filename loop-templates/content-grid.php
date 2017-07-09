@@ -22,7 +22,7 @@ $col = 4;
 				<div class="card-img-overlay">
 
 					<header class="entry-header">
- 						<h4 class="card-title"><span class="zero"><?php the_title(); ?></span><span class="point">.</span><span class="post-incr"><?php echo esc_html( );  ?></span></h4> 
+ 						<h4 class="card-title"><span class="zero"><?php the_title(); ?></span><span class="point">.</span><span class="post-incr"><?php ?></span></h4> 
 
 						<?php if ( 'post' === get_post_type() ) : ?>
 
