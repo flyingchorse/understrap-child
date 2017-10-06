@@ -9583,6 +9583,9 @@ aside li {
 .simple-social-icons ul li {
   margin-left: 1px !important; }
 
+.social-bar {
+  display: none; }
+
 .featured-video-plus.fvp-center {
   position: relative;
   padding-bottom: 56.25%;

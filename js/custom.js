@@ -3,10 +3,14 @@
 
 jQuery('#navbarNavDropdown').on('hidden.bs.collapse', function () {
   jQuery('.navbar').removeClass('menu-pane');
+  jQuery('.social-bar').hide();
+  
 });
 
 jQuery('#navbarNavDropdown').on('show.bs.collapse', function () {
   jQuery('.navbar').addClass('menu-pane');
+  jQuery('.social-bar').show();
+  
 });
 
 var $item = jQuery('.carousel .carousel-item');

@@ -79,9 +79,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 						'walker'          => new WP_Bootstrap_Navwalker(),
 					)
 				); ?>
-				<div class="social-bar "><?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Dropdown Menu Widget") ) : ?>
+				</div>
+						<div class="social-bar "><?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Dropdown Menu Widget") ) : ?>
 <?php endif;?>
-</div></div>
+</div>
 			<?php if ( 'container' == $container ) : ?>
 			</div><!-- .container -->
 			<?php endif; ?>

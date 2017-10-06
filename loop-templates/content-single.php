@@ -34,14 +34,14 @@ $galleryId = get_post_meta($post_id, 'viewbook', true);
 		?>
 		<div class="entry-meta">
 
-			<?php understrap_posted_on(); ?>
+			<?php //understrap_posted_on(); ?>
 
 		</div><!-- .entry-meta -->
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
 		
-		<?php understrap_entry_footer(); ?>
+		<?php //understrap_entry_footer(); ?>
 
 	</footer><!-- .entry-footer -->
 
