@@ -202,7 +202,7 @@ function child_theme_setup() {
     'container' => 'main',
     'render'    => 'digidol_infinite_scroll_render',
     'footer' => 'page',
-    'posts_per_page' => '16'
+    'posts_per_page' => '4'
 ) );
 
 
