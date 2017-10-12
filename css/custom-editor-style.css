@@ -9530,7 +9530,8 @@ button:focus {
 .card-title.widget-post-number {
   font-size: 121px;
   margin: 0;
-  color: rgba(0, 0, 0, 0.2) !important; }
+  color: rgba(0, 0, 0, 0.2) !important;
+  position: relative; }
 
 aside {
   padding-bottom: 4.0rem;
