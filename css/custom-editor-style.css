@@ -9645,3 +9645,7 @@ aside li {
 
 #infinite-footer {
   display: none; }
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .card-title {
+    font-size: 120px; } }

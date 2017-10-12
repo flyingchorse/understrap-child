@@ -499,3 +499,11 @@ display: none;
 #infinite-footer {
 	display: none;	
 }
+
+@include media-breakpoint-only(sm) { 
+	
+		.card-title {
+		font-size:120px;
+		}
+	
+	}
