@@ -9626,8 +9626,6 @@ aside li {
   .navbar {
     padding-top: 45px;
     display: flex; }
-  .home .navbar {
-    background-color: rgba(0, 0, 0, 0.43); }
   #wrapper-hero {
     margin-top: 0px; }
   #hero-slides {
