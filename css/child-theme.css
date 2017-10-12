@@ -9608,8 +9608,11 @@ aside li {
   .sticky-top {
     position: absolute;
     background-color: transparent; }
-  .navbar .subarticle, .keyline, .navmnth, .nav-point, .navyr {
-    display: inline-block; }
+  /*
+	  .navbar .subarticle, .keyline, .navmnth, .nav-point, .navyr  {
+	display: inline-block;
+}
+*/
   .navbar {
     padding-top: 45px;
     display: flex; }
