@@ -38,7 +38,7 @@ $col = 4;
 					 <?php endif;?> 
 				<div class="card-img-overlay">
 
-					<header class="entry-header">
+					<header class="article-meta">
 						<div class="container">
 							<?php digidol_site_title(2); ?>
  						<h4 class="card-title"><span class="zero">0</span><span class="point">.</span><span class="post-incr"><?php echo esc_html( get_post_meta($post->ID,'incr_number',true));  ?></span></h4> 
