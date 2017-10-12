@@ -9641,3 +9641,6 @@ aside li {
     margin-top: 26%; }
   .widget-area {
     padding-top: 0; } }
+
+#infinite-footer {
+  display: none; }
