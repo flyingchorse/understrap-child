@@ -285,8 +285,8 @@ if ($pageposts):
 foreach ($pageposts as $post):
 setup_postdata($post);
 $counts++;
-add_post_meta($post->ID, 'incr_number', $counts, true);
-update_post_meta($post->ID, 'incr_number', $counts);
+add_post_meta($post->ID, 'incr_number', sprintf('%02d' ,$counts), true);
+update_post_meta($post->ID, 'incr_number', sprintf('%02d' ,$counts));
 endforeach;
 endif;
 }
