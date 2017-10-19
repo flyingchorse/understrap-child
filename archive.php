@@ -21,19 +21,12 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 		<div class="row">
 
-			<!-- Do the left sidebar check -->
-			<div class="col-md-12 content-area" id="primary">
-
+				<!-- Do the left sidebar check -->
+			<?php get_template_part( 'global-templates/left-sidebar-check', 'none' ); ?>
+			
 			<main class="site-main" id="main">
-				<div class="row">
+				
 				<?php if ( have_posts() ) : ?>
-
-					<header class="page-header">
-						<?php
-						//the_archive_title( '<h1 class="page-title">', '</h1>' );
-						//the_archive_description( '<div class="taxonomy-description">', '</div>' );
-						?>
-					</header><!-- .page-header -->
 
 					<?php /* Start the Loop */ ?>
 					<?php while ( have_posts() ) : the_post(); ?>
@@ -45,7 +38,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 						 * If you want to override this in a child theme, then include a file
 						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 						 */
-						get_template_part( 'loop-templates/content', 'gridsmall' );
+						get_template_part( 'loop-templates/content', 'articles' );
 						?>
 							
 						
@@ -57,7 +50,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 					
 
 				<?php endif; ?>
-				</div>
+				
 			</main><!-- #main -->
 
 			<!-- The pagination component -->
@@ -68,9 +61,10 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 		<!-- Do the right sidebar check -->
 		<?php if ( 'right' === $sidebar_pos || 'both' === $sidebar_pos ) : ?>
 
-			<?php //get_sidebar( 'right' ); ?>
+			<?php get_sidebar( 'right' ); ?>
 
 		<?php endif; ?>
+
 
 	</div> <!-- .row -->
 
