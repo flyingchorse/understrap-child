@@ -9270,7 +9270,8 @@ button:focus {
   font-size: 1.7rem;
   letter-spacing: -0.02em;
   padding-top: .40rem;
-  margin-left: 0; }
+  margin-left: 0;
+  padding-bottom: 1.25rem; }
 
 .home .navbar-brand {
   color: white; }
