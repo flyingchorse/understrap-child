@@ -9595,7 +9595,8 @@ aside li {
   margin-left: 1px !important; }
 
 .social-bar {
-  display: none; }
+  display: none;
+  margin-top: 10px; }
 
 .featured-video-plus.fvp-center {
   position: relative;
