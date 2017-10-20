@@ -230,15 +230,28 @@ add_action( 'after_setup_theme', 'child_theme_setup', 11 );
 // Add the Month motif function
 function digidol_infinite_scroll_render() {
 	if ( is_front_page() && is_home() ) :
-    while ( have_posts() ) {
-		the_post();
-		if ( is_search() ) :
-			get_template_part( 'loop-templates/content', 'search' );
-		else :
-			get_template_part( 'loop-templates/content', 'grid' );
-		endif;
-	}
+	    while ( have_posts() ) {
+			the_post();
+			if ( is_search() ) :
+				get_template_part( 'loop-templates/content', 'search' );
+			else :
+				get_template_part( 'loop-templates/content', 'grid' );
+			endif;
+		}
+	
+	else :
+	
+		while ( have_posts() ) {
+			the_post();
+			if ( is_search() ) :
+				get_template_part( 'loop-templates/content', 'search' );
+			else :
+				get_template_part( 'loop-templates/content', 'articles' );
+			endif;
+		}
+	
 	endif;
+	
 }
 
 function month_motif(){
