@@ -9270,14 +9270,15 @@ button:focus {
   font-size: 1.7rem;
   letter-spacing: -0.02em;
   padding-top: .40rem;
-  margin-left: 0;
-  padding-bottom: 1.25rem; }
+  margin-left: 0; }
 
 .home .navbar-brand {
-  color: white; }
+  color: white;
+  padding-bottom: .25rem; }
 
 .navbar-brand {
-  color: black; }
+  color: black;
+  padding-bottom: 1.25rem; }
 
 .navbar-toggler {
   padding-right: 0; }
