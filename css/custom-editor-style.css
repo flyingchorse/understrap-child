@@ -9447,6 +9447,9 @@ button:focus {
 .pagination {
   padding-top: 15px; }
 
+.archive article {
+  padding-bottom: 2.0rem; }
+
 /* CSS used here will be applied after bootstrap.css */
 /* MARKETING CONTENT
     -------------------------------------------------- */
@@ -9651,3 +9654,6 @@ aside li {
 @media (min-width: 576px) and (max-width: 767px) {
   .card-title {
     font-size: 120px; } }
+
+.understrap-read-more-link {
+  margin-bottom: 30px; }

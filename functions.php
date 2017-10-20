@@ -456,3 +456,20 @@ if ( function_exists('register_sidebar') )
     'after_title' => '</h3>',
   )
 );
+
+if ( ! function_exists( 'all_excerpts_get_more_link' ) ) {
+	/**
+	 * Adds a custom read more link to all excerpts, manually or automatically generated
+	 *
+	 * @param string $post_excerpt Posts's excerpt.
+	 *
+	 * @return string
+	 */
+	function all_excerpts_get_more_link( $post_excerpt ) {
+
+		return $post_excerpt . ' [<a class="understrap-read-more-link" href="' . get_permalink( get_the_ID() ) . '">' . __( 'Read More...',
+		'understrap' ) . '</a>]';
+	}
+}
+add_filter( 'wp_trim_excerpt', 'all_excerpts_get_more_link' );
+

@@ -233,6 +233,12 @@ font-family:'Helvetica Neue LT W01_35 Thin';
 }
 
 
+.archive {
+	article {
+		padding-bottom: 2.0rem;
+	}
+}
+
 /* CSS used here will be applied after bootstrap.css */
 
  /* MARKETING CONTENT
@@ -510,3 +516,7 @@ margin-top: 30px;
 		}
 	
 	}
+	
+.understrap-read-more-link {
+	margin-bottom: 30px;
+}
