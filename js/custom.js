@@ -74,7 +74,9 @@ jQuery(document).ready(function(){
 */
       
       
- 
+ function getRootUrl() {
+	return window.location.origin?window.location.origin+'/':window.location.protocol+'/'+window.location.host+'/';
+}
  
 
      jQuery(window).scroll(function () {
@@ -87,9 +89,15 @@ jQuery(document).ready(function(){
         // scroll body to 0px on click
         jQuery('#back-to-top').click(function () {
             jQuery('#back-to-top').tooltip('hide');
+            if (jQuery('.home').length > 0) {
+	          window.location.href = getRootUrl();  
+            }
+            else
+            {
             jQuery('body,html').animate({
                 scrollTop: 0
             }, 800);
+            }
             return false;
         });
         
