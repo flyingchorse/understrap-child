@@ -28,7 +28,7 @@ function theme_enqueue_styles() {
 	
 	
 	wp_enqueue_style( 'google_fonts', add_query_arg( $query_args, "//fonts.googleapis.com/css" ), array(), null );
-	wp_enqueue_style( 'fontscom',  "//fast.fonts.net/cssapi/996199d0-ca5a-4ed0-97ce-87cc0efa7e8b.css" ,array(), null ); 
+	wp_enqueue_style( 'fontscom',  "//fast.fonts.net/cssapi/b1af4ec6-225e-4db2-900a-c70259483da8.css" ,array(), null ); 
     
 
 }
