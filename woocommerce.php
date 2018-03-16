@@ -11,7 +11,7 @@
  */
 
 get_header();
-echo("WOO");
+
 if ( function_exists('yoast_breadcrumb') ) 
 {yoast_breadcrumb('<p id="breadcrumbs">','</p>');}
 
@@ -20,7 +20,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 ?>
 
-<div class="wrapper" id="woocommerce-wrapper">
+<div class="wrapper WOOHOO" id="woocommerce-wrapper">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
