@@ -12,13 +12,19 @@
 
 get_header();
 
-if ( function_exists('yoast_breadcrumb') ) 
+?>
+<div class="wrapper">
+	<<div class="row">
+		<?php if ( function_exists('yoast_breadcrumb') ) 
 {yoast_breadcrumb('<p id="breadcrumbs">','</p>');}
 
-$container   = get_theme_mod( 'understrap_container_type' );
+$container   = get_theme_mod( 'understrap_container_type' );?>
+	</div>
+</div>
 
 
-?>
+
+
 
 <div class="wrapper WOOHOO" id="woocommerce-wrapper">
 
