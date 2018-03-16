@@ -14,7 +14,7 @@ get_header();
 
 ?>
 <div class="wrapper">
-	<div class="row">
+	<div class="container">
 		<?php if ( function_exists('yoast_breadcrumb') ) 
 {yoast_breadcrumb('<p id="breadcrumbs">','</p>');}
 
