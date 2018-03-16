@@ -10,8 +10,6 @@ function understrap_remove_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'understrap_remove_scripts', 20 );
 
-add_theme_support('woocommerce');
-
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 function theme_enqueue_styles() {
 
