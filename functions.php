@@ -470,7 +470,7 @@ if ( function_exists('register_sidebar') )
   )
 );
 
-if ( ! function_exists( 'all_excerpts_get_more_link' ) ) {
+if ( ! function_exists( 'understrap_all_excerpts_get_more_link' ) ) {
 	/**
 	 * Adds a custom read more link to all excerpts, manually or automatically generated
 	 *
@@ -478,11 +478,19 @@ if ( ! function_exists( 'all_excerpts_get_more_link' ) ) {
 	 *
 	 * @return string
 	 */
-	function all_excerpts_get_more_link( $post_excerpt ) {
+	function understrap_all_excerpts_get_more_link( $post_excerpt ) {
 
 		return $post_excerpt . '   <a class="understrap-read-more-link" href="' . get_permalink( get_the_ID() ) . '">' . __( 'Read More...',
 		'understrap' ) . '</a>';
 	}
 }
-add_filter( 'wp_trim_excerpt', 'all_excerpts_get_more_link' );
+add_filter( 'wp_trim_excerpt', 'understrap_all_excerpts_get_more_link' );
 
+add_filter( 'post_thumbnail_html', 'my_post_image_html', 10, 3 );
+
+function my_post_image_html( $html, $post_id, $post_image_id ) {
+
+  $html = '<a href="' . get_permalink( $post_id ) . '" title="' . esc_attr( get_post_field( 'post_title', $post_id ) ) . '">' . $html . '</a>';
+  return $html;
+
+}
