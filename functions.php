@@ -100,7 +100,40 @@ function digidol_site_title_post_only() {
 
 add_action('digidol_site_title_post_only','title_post_number');
 
+function digidol_packery_gallery() {
+	do_action('digidol_packery_gallery');
+}
 
+function digidol_packery_gallery_construct() {
+	
+	global $post;
+	$the_content =  $post->post_content;
+	$the_content = preg_replace("~(?:\[/?)[^/\]]+/?\]~s", '', $the_content);  # strip shortcodes, keep shortcode content
+	remove_shortcode( 'gallery' );
+	$new_content = apply_filters('the_content',$the_content);
+	//echo $new_content;  
+
+	
+	
+	
+	preg_match('/\[gallery.*ids=.(.*).\]/', $post->post_content, $ids);
+	if ($ids) {
+	$attachments = explode(",", $ids[1]);
+	if ($attachments) {
+		foreach ( $attachments as $attachment ) {
+		
+		$imagethumbnailaspect = wp_get_attachment_image_src($attachment, 'full') ;
+		$aspect_thumbnail =	($imagethumbnailaspect[2]>$imagethumbnailaspect[1] ? "grid-packer-portrait": "grid-packer");
+		$imagethumbnail = wp_get_attachment_image_src($attachment, $aspect_thumbnail) ;
+		?><div class="grid-item <?php echo ($imagethumbnail[2]>$imagethumbnail[1] ? "grid-item--width2": ""); ?>"><img class="<?php echo $aspect_thumbnail; ?>" src="<?php echo $imagethumbnail[0]  ?>"/></div><?php
+			
+			}
+		}
+
+	}
+}
+
+add_action('digidol_packery_gallery','digidol_packery_gallery_construct');
 
 function digidol_hero() {
     do_action('digidol_hero');
@@ -215,6 +248,9 @@ function child_theme_setup() {
 	add_image_size( 'grid-image', 890,500, true );
 	add_image_size('archive-thumb',208,116, true);
 	add_image_size('featured_preview', 55, 55, true);
+	add_image_size( 'grid-packer', 252, 142, true );
+	add_image_size( 'grid-packer-portrait', 252, 287, true );
+	
 	
 	
 	// Register the three useful image sizes for use in Add Media modal

@@ -50,16 +50,24 @@ jQuery(window).on('resize', function (){
   $article.height($wHeight); 
 });
 
+var $grid = jQuery('.grid').imagesLoaded( function() {
+	
+$grid.packery({
+  // options
+columnWidth: '.grid-sizer',
+itemSelector: '.grid-item',
+percentPosition: true
+});
+
+});
 
 
 jQuery(document).ready(function(){
-	
+
 
 
 //window.addEventListener('scroll', checkScroll, false);
 //window.addEventListener('resize', checkScroll, false);
-
-	
 
 
 /*
@@ -72,12 +80,11 @@ jQuery(document).ready(function(){
     jQuery('#post-title').text($posttitle.text());
 }
 */
-      
-      
+         
  function getRootUrl() {
 	return window.location.origin?window.location.origin+'/':window.location.protocol+'/'+window.location.host+'/';
 }
- 
+
 
      jQuery(window).scroll(function () {
             if (jQuery(this).scrollTop() > 50) {
@@ -103,6 +110,8 @@ jQuery(document).ready(function(){
         
 
 });
+
+
 
 /*
 jQuery('#carouselExampleControls').bind('slid.bs.carousel', function (e) {

@@ -9657,3 +9657,12 @@ aside li {
 
 .understrap-read-more-link {
   margin-bottom: 30px; }
+
+.grid-sizer,
+.grid-item {
+  border: solid 1px white;
+  width: 20%; }
+
+/* 2 columns wide */
+.grid-item--width2 {
+  width: 20%; }

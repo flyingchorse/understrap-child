@@ -149,8 +149,8 @@ gulp.task('scripts', function() {
 
         // End - All BS4 stuff
 
-        basePaths.dev + 'js/skip-link-focus-fix.js',
-         './js/custom.js',
+        basePaths.dev + 'js/skip-link-focus-fix.js','./js/imagesloaded.pkgd.js',
+         './js/packery.pkgd.js','./js/custom.js',
          basePaths.dev + 'js/fullscreen.js'
     ];
   gulp.src(scripts)
