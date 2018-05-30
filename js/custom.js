@@ -54,9 +54,7 @@ var $grid = jQuery('.grid').imagesLoaded( function() {
 	
 $grid.packery({
   // options
-columnWidth: '.grid-sizer',
-itemSelector: '.grid-item',
-percentPosition: true
+itemSelector: '.grid-item'
 });
 
 });
