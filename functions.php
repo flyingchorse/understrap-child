@@ -249,7 +249,7 @@ function child_theme_setup() {
 	add_image_size('archive-thumb',208,116, true);
 	add_image_size('featured_preview', 55, 55, true);
 	add_image_size( 'grid-packer', 146, 96, true );
-	add_image_size( 'grid-packer-portrait', 146, 192, true );
+	add_image_size( 'grid-packer-portrait', 146, 193, true );
 	
 	
 	
