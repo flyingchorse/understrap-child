@@ -9658,22 +9658,22 @@ aside li {
 .understrap-read-more-link {
   margin-bottom: 30px; }
 
+.grid-item {
+  border: solid 1px white;
+  width: 12.5%; }
+
+.grid-item--width2 {
+  width: 12.5%; }
+
 /*
-.grid-sizer,
-.grid-item { 
-	border: solid 1px white;
-	width: 20%; }
- 2 columns wide
-.grid-item--width2 { width: 20%; }
-*/
 .grid-item {
   float: left;
   width: 146px;
   height: 96px;
-  border: 1px solid #ffffff; }
+  
+  border: 1px solid #ffffff;
+}
 
-.grid-item--width2 {
-  height: 192px; }
-
-.grid-item--height2 {
-  height: 192px; }
+ .grid-item--width2 { height: 192px; }
+.grid-item--height2 { height: 192px; }
+*/
