@@ -31,7 +31,7 @@ $galleryId = get_post_meta($post_id, 'viewbook', true);
 	<div class="grid">
 	<div class="grid-sizer"></div>
 <!-- 	Here will need to go a loop to pull in all the images from the gallery -->
-  <?php// digidol_packery_gallery(); ?>
+  <?php digidol_packery_gallery(); ?>
 <!--   This will be the end of the loop -->
 </div>
 

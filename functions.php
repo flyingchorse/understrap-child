@@ -248,8 +248,8 @@ function child_theme_setup() {
 	add_image_size( 'grid-image', 890,500, true );
 	add_image_size('archive-thumb',208,116, true);
 	add_image_size('featured_preview', 55, 55, true);
-	add_image_size( 'grid-packer', 146, 96, true );
-	add_image_size( 'grid-packer-portrait', 146, 193, true );
+	add_image_size( 'grid-packer', 146, 98, true );
+	add_image_size( 'grid-packer-portrait', 146, 196, true );
 	
 	
 	

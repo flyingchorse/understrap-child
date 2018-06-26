@@ -9658,13 +9658,11 @@ aside li {
 .understrap-read-more-link {
   margin-bottom: 30px; }
 
+/* fluid 4 columns */
 .grid-item {
-  border: solid 1px white;
-  width: 12.5%; }
+  width: 10%; }
 
-.grid-item--width2 {
-  width: 12.5%; }
-
+/* fluid 4% gutter */
 /*
 .grid-item {
   float: left;

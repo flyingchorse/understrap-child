@@ -50,19 +50,18 @@ jQuery(window).on('resize', function (){
   $article.height($wHeight); 
 });
 
-/*
+
 var $grid = jQuery('.grid').imagesLoaded( function() {
 	
 $grid.packery({
   // options
-columnWidth: '.grid-sizer',
 itemSelector: '.grid-item',
-horizontal: true,
-percentPosition: true
+percentPosition: true,
 });
 
+
 });
-*/
+
 
 
 jQuery(document).ready(function(){

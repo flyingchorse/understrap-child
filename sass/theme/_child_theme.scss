@@ -520,17 +520,22 @@ margin-top: 30px;
 .understrap-read-more-link {
 	margin-bottom: 30px;
 }
-
 .grid {
+	
+	}
+/* fluid 4 columns */
+.grid-item { width: 10%; }
+/* fluid 4% gutter */
 
-}
 
 
-.grid-item { 
-	border: solid 1px white;
-	width: 12.5%; }
 
-.grid-item--width2 { width: 12.5%; }
+
+
+
+
+
+
 
 
 
@@ -546,6 +551,8 @@ margin-top: 30px;
  .grid-item--width2 { height: 192px; }
 .grid-item--height2 { height: 192px; }
 */
+
+
 
 
 
