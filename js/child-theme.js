@@ -13058,7 +13058,7 @@ var $grid = jQuery('.grid').imagesLoaded( function() {
 $grid.packery({
   // options
 itemSelector: '.grid-item',
-percentPosition: true,
+gutter: 0,
 });
 
 
