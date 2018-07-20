@@ -9664,8 +9664,7 @@ aside li {
 .grid-item {
   float: left;
   width: 63px;
-  height: 42px;
-  border: 1px solid #ffffff; }
+  height: 42px; }
 
 .grid-item--width2 {
   height: 84px; }
