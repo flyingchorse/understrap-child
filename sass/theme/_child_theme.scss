@@ -523,34 +523,21 @@ margin-top: 30px;
 .grid {
 	
 	}
-/* fluid 4 columns */
-.grid-item { width: 10%; }
-/* fluid 4% gutter */
+/* fluid 4 columns 
+.grid-item { width: 12%; }
+ fluid 4% gutter */
 
 
-
-
-
-
-
-
-
-
-
-
-
-/*
 .grid-item {
   float: left;
-  width: 146px;
-  height: 96px;
+  width: 63px;
+  height: 42px;
   
   border: 1px solid #ffffff;
 }
 
- .grid-item--width2 { height: 192px; }
-.grid-item--height2 { height: 192px; }
-*/
+ .grid-item--width2 { height: 84px; }
+
 
 
 
