@@ -28,12 +28,7 @@ $galleryId = get_post_meta($post_id, 'viewbook', true);
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		<h4 class='subheading'><?php echo esc_html(get_post_meta($post_id, 'subheading', true)); ?></h3>
 	</header><!-- .entry-header -->
-	<div class="grid">
-	<div class="grid-sizer"></div>
-<!-- 	Here will need to go a loop to pull in all the images from the gallery -->
-  <?php digidol_packery_gallery(); ?>
-<!--   This will be the end of the loop -->
-</div>
+	
 
 	<div class="entry-content">
 
