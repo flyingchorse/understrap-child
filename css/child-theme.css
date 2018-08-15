@@ -9545,7 +9545,8 @@ button:focus {
   font-size: 121px;
   margin: 0;
   color: rgba(0, 0, 0, 0.2) !important;
-  position: relative; }
+  position: relative;
+  padding-top: 38px; }
 
 aside {
   padding-bottom: 4.0rem;
@@ -9694,6 +9695,9 @@ aside li {
 
 /* Media Queries for thumbnails */
 @media screen and (min-width: 992px) {
+  .card-title.widget-post-number {
+    font-size: 152px;
+    padding-top: 102px; }
   .grid-item {
     float: left;
     width: 75px;
@@ -9709,6 +9713,9 @@ aside li {
 
 /* Media Queries for thumbnails */
 @media screen and (min-width: 1200px) {
+  .card-title.widget-post-number {
+    font-size: 196px;
+    padding-top: 124px; }
   .grid-item {
     float: left;
     width: 90px;
