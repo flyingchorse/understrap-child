@@ -9223,8 +9223,11 @@ body {
 .site {
   background-color: white; }
 
+.home .navbar {
+  background-color: #292b2c; }
+
 .navbar {
-  background-color: transparent;
+  background-color: #e0e0e0;
   display: block;
   z-index: 1033;
   padding: 0.5rem 0px 0px 0px; }
@@ -9426,7 +9429,7 @@ button:focus {
   background-repeat: no-repeat; }
 
 .home #wrapper-index {
-  padding: 0; }
+  padding: 75px 0; }
 
 .article-card, .article-card img, .card, .card-img {
   padding: 0;
